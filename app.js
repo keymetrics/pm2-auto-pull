@@ -61,6 +61,6 @@ pm2.connect(function() {
     autoPull(function() {
       running = false;
     });
-  }, 1000 || conf.interval);
+  }, 30000 || conf.interval);
 
 });
