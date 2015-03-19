@@ -1,0 +1,25 @@
+{
+  "name": "pm2-auto-pull",
+  "version": "1.13.0",
+  "description": "PM2 module to auto pull applications when there is an update",
+  "main": "app",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "pmx": "latest",
+    "pm2": "git+ssh://git@github.com:Unitech/pm2.git#development",
+    "async": "*",
+    "debug": "*"
+  },
+  "apps": [
+    {
+      "script": "app.js",
+      "log_date_format": "YYYY-MM-DD HH:mm:ss Z",
+      "max_memory_restart": "100M",
+      "merge_logs": true
+    }
+  ],
+  "author": "",
+  "license": "ISC"
+}
