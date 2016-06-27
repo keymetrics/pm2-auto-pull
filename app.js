@@ -35,7 +35,7 @@ function autoPull(cb) {
                           meta.procs[0].pm2_env.versioning.branch);
             else {
               // Backward compatibility
-              console.log('App %s succesfully pulled');
+              console.log('App %s succesfully pulled', proc.name);
             }
           }
           if (err)
