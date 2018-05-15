@@ -18,20 +18,9 @@ function autoPull(cb) {
       if (proc.pm2_env && proc.pm2_env.versioning) {
         pm2.pullAndReload(proc.name, function(err, meta) {
           if (meta) {
-            var rev = meta.rev;
-
             app_updated.inc();
 
-            if (rev)
-              console.log('Successfully pulled [App name: %s] [Commit id: %s] [Repo: %s] [Branch: %s]',
-                          proc.name,
-                          rev.current_revision,
-                          meta.procs[0].pm2_env.versioning.repo_path,
-                          meta.procs[0].pm2_env.versioning.branch);
-            else {
-              // Backward compatibility
-              console.log('App %s succesfully pulled', proc.name);
-            }
+            console.log('>>>>>>>>>>>>> Successfully pulled Application! [App name: %s]', proc.name)
           }
           if (err)
             console.log('App %s already at latest version', proc.name);
