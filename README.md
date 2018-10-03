@@ -1,3 +1,5 @@
+**Deprecated with PM2 <= 3.2**
+
 # pm2-auto-pull
 
 Synchronize all applications managed by PM2 + GIT automatically.
